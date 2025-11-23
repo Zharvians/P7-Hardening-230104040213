@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTS WSE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 text-white min-h-screen font-[Poppins] flex flex-col justify-between transition-all duration-500">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 backdrop-blur bg-slate-900/50 shadow-lg">
+    <h1 class="text-3xl font-bold tracking-wide bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">🎓 Data Mahasiswa</h1>
+    <div class="flex gap-4 items-center">
+      <span id="clock" class="text-lg font-mono text-sky-300"></span>
+      <button id="themeToggle" class="bg-sky-600 px-3 py-1 rounded-lg hover:bg-sky-700 transition">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mx-auto p-6">
+    <!-- Search & Filter -->
+    <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
+      <input id="searchInput" type="text" placeholder="🔍 Cari nama, npm, atau jurusan..." 
+        class="w-full sm:w-1/2 p-2 rounded-lg text-black focus:ring-2 focus:ring-sky-500 outline-none">
+      <select id="majorFilter" class="p-2 rounded-lg text-black">
+        <option value="">Semua Jurusan</option>
+      </select>
+    </div>
+
+    <!-- Add Form -->
+    <form id="studentForm" class="flex flex-wrap gap-3 mb-6 justify-center bg-slate-800/50 p-4 rounded-xl backdrop-blur shadow-xl">
+      <input id="name" placeholder="Nama" class="p-2 rounded text-black" required />
+      <input id="npm" placeholder="NPM" class="p-2 rounded text-black" required />
+      <input id="major" placeholder="Jurusan" class="p-2 rounded text-black" required />
+      <button class="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-lg font-semibold transition-all">Tambah</button>
+    </form>
+
+    <!-- Table -->
+    <div class="overflow-x-auto rounded-xl shadow-lg backdrop-blur bg-slate-900/50">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-700 text-sky-300 uppercase text-xs tracking-wider">
+          <tr>
+            <th class="p-3 text-left">ID</th>
+            <th class="p-3 text-left">Nama</th>
+            <th class="p-3 text-left">NPM</th>
+            <th class="p-3 text-left">Jurusan</th>
+            <th class="p-3 text-center">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="divide-y divide-slate-700"></tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="flex justify-center mt-6 gap-2"></div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed top-6 right-6 hidden bg-sky-600 text-white px-4 py-2 rounded-lg shadow-lg transition-all"></div>
+
+  <!-- Modal Edit -->
+  <div id="editModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur flex items-center justify-center">
+    <div class="bg-slate-800 rounded-2xl p-6 w-96">
+      <h2 class="text-xl font-semibold mb-4 text-center text-sky-300">Edit Student</h2>
+      <input id="editName" class="w-full p-2 mb-2 rounded text-black" placeholder="Nama" />
+      <input id="editNpm" class="w-full p-2 mb-2 rounded text-black" placeholder="NPM" />
+      <input id="editMajor" class="w-full p-2 mb-4 rounded text-black" placeholder="Jurusan" />
+      <div class="flex justify-between">
+        <button id="cancelEdit" class="bg-gray-500 hover:bg-gray-600 px-3 py-2 rounded">Batal</button>
+        <button id="saveEdit" class="bg-green-500 hover:bg-green-600 px-3 py-2 rounded">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-6 bg-gradient-to-r from-sky-800 to-indigo-800 backdrop-blur shadow-lg">
+    <p class="text-slate-200 text-sm">© 2025 Student Management • Crafted with 💙 by Rama Kazuya</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Zhar",
+    "npm": "2301040401234",
+    "major": "Teknik Informatika"
+  },
+  {
+    "id": 3,
+    "name": "Budi Santoso",
+    "npm": "230104040224",
+    "major": "Teknik Informatika"
+  },
+  {
+    "id": 4,
+    "name": "Agil Tauhit Ismail",
+    "npm": "230104040229",
+    "major": "Teknik Komputer"
+  },
+  {
+    "id": 5,
+    "name": "Kaspul Anwari",
+    "npm": "230104040231",
+    "major": "Manajemen Informatika"
+  },
+  {
+    "id": 6,
+    "name": "Armansyah",
+    "npm": "230104040233",
+    "major": "Rekayasa Perangkat Lunak"
+  },
+  {
+    "id": 7,
+    "name": "Ahmad Fauzil Adhim",
+    "npm": "230104040237",
+    "major": "Keamanan Siber"
+  },
+  {
+    "id": 9,
+    "name": "Muhammad Rif'at Alhadi",
+    "npm": "230104040241",
+    "major": "Sistem Komputer"
+  },
+  {
+    "id": 10,
+    "name": "Rama",
+    "npm": "230104041234",
+    "major": "Teknik Informatika"
+  }
+]
