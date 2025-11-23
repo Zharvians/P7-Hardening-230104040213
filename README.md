@@ -7,7 +7,7 @@ API Mahasiswa dengan keamanan, monitoring, logging, dan struktur profesional.
 [![GitHub - Muhayat Lab](https://img.shields.io/badge/GitHub-Muhayat--Lab-181717?logo=github&style=for-the-badge)](https://github.com/muhayat-lab)
 
 ##  👨‍💻 Developer
-[![GitHub - RamaKazuya](https://img.shields.io/badge/GitHub-RamaKazuya-007ACC?logo=github&style=for-the-badge)](https://github.com/RamaKazuya)
+[![GitHub - RamaKazuya](https://img.shields.io/badge/GitHub-Zharvians-007ACC?logo=github&style=for-the-badge)](https://github.com/Zharvians)
 
 **Nama:** Muhammad Ade Ramadhani  
 **NPM:** 230104040213  
@@ -34,7 +34,6 @@ UTS ini membangun **RESTful API mahasiswa** menggunakan **Node.js + Express**, d
 
 ##  🚀 Cara Menjalankan Proyek
 
-```bash
 git clone https://github.com/RamaKazuya/UTS-WSE-230104040213.git
 cd UTS-WSE-230104040213
 npm install
@@ -56,8 +55,9 @@ npm run dev   # http://localhost:3000
 
 ---
 
-##  📁 Contoh Data (students.json)
+## 📁 Contoh Data (students.json)
 
+```json
 [
   {
     "id": 1,
@@ -79,61 +79,70 @@ npm run dev   # http://localhost:3000
   }
 ]
 
+```
 ---
 
 ## 🧾 Validasi Input
-# Field wajib : 
+```bash
+Field wajib : 
 name
 npm
 major
-
+```
 # Contoh error:
+```bash
 {
   "status": "fail",
   "message": "Field 'name' wajib diisi"
 }
-
+```
 ---
 
 📬 Contoh Request (Postman / Curl)
-# POST – Tambah Data
+```bash
+POST – Tambah Data
 curl -X POST http://localhost:3000/api/students \
 -H "Content-Type: application/json" \
 -d '{"name":"Andi", "npm":"230104040250", "major":"Sistem Informasi"}'
-
+```
 ---
-
-# PUT – Update Data
+```bash
+PUT – Update Data
 curl -X PUT http://localhost:3000/api/students/1 \
 -H "Content-Type: application/json" \
 -d '{"name":"Update Nama","npm":"230104040213","major":"Teknologi Informasi"}'
-
+```
 ---
-
-# DELETE – Hapus Data
+```bash
+DELETE – Hapus Data
 curl -X DELETE http://localhost:3000/api/students/3
-
+```
 ---
 
 ##  🛡 Keamanan & Middleware
-# ✔ Helmet
+
+```bash
+✔ Helmet
 Melindungi terhadap serangan HTTP umum.
 ---
-# ✔ CORS
+✔ CORS
 Mengatur domain frontend yang diizinkan.
 ---
-# ✔ Rate Limiting
+✔ Rate Limiting
 Batas 100 request / 15 menit untuk mencegah spam.
 ---
-# ✔ Morgan Logging
+✔ Morgan Logging
 Log request secara detail & rapi.
 ---
-# ✔ Response Time
+✔ Response Time
 Monitor waktu proses setiap request.
 
+```
 ---
 
 ##  📂 Struktur Folder
+
+```bash
 
 P7-Hardening-230104040213
 ├── app.js
@@ -154,9 +163,12 @@ P7-Hardening-230104040213
 └── utils
     └── logger.js
 
+```
 ---
 
 ##  🔎 Global Error Handler
+
+```bash
 
 module.exports = (err, req, res, next) => {
   console.error(err.stack);
@@ -168,11 +180,14 @@ module.exports = (err, req, res, next) => {
   });
 };
 
+```
 ---
 
 ##  🔥 Health Check Endpoint
 
-# GET /api/health
+```bash
+
+GET /api/health
 ---
 {
   "status": "UP",
@@ -180,11 +195,14 @@ module.exports = (err, req, res, next) => {
   "timestamp": "2025-11-28T12:00:20.123Z"
 }
 
+```
 ---
 
 ##  ℹ️ Info API
 
-# curl http://localhost:3000/api/info
+```bash
+
+curl http://localhost:3000/api/info
 ---
 {
   "service": "UTS Web Service - Students Resource",
@@ -193,9 +211,14 @@ module.exports = (err, req, res, next) => {
   "description": "RESTful API lengkap dengan keamanan, logging, validasi, dan monitoring."
 }
 
+```
+
+
 ---
 
 ## 📜 Lisensi
+
+```bash
 
 Lisensi ini dibuat khusus untuk keperluan akademik pada mata kuliah
 Web Service Engineering — Praktikum 7 (Hardening).
@@ -209,3 +232,5 @@ project ini untuk tujuan komersial tanpa izin pemilik asli.
 Semua risiko penggunaan berada di tangan pengguna.
 
 © 2025 — 230104040213. Semua hak dilindungi.
+
+```
